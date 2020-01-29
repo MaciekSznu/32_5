@@ -12,12 +12,27 @@ describe('calculateDistancePoints', () => {
       assert.equal(actual, expected);
     });
     it('should return 60', () => {
-      const actual = calculateDistancePoints(120, !'mamut', 120);
+      const actual = calculateDistancePoints(120, 'large', 120);
 
       const expected = 60;
 
       assert.equal(actual, expected);
     });
+    it('should return 60', () => {
+      const actual = calculateDistancePoints(120, 'normal', 120);
+
+      const expected = 60;
+
+      assert.equal(actual, expected);
+    });
+    it('should return undefined', () => {
+      const actual = calculateDistancePoints('120', '', NaN);
+
+      const expected = undefined;
+
+      assert.equal(actual, expected);
+    });
+
   });
   describe('kPoint and distance', () => {
     it('should return 121.2', () => {

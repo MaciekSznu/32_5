@@ -8,6 +8,4 @@ const calculateTotalPoints = (distance, hillSize, kPoint, styleNotes, windFactor
   return distancePoints + stylePoints + windFactor + gateFactor;
 }
 
-console.log(calculateTotalPoints(140, 'large', 120, [17.5, 18, 18.5, 19, 19.5], 3, -2));
-
 module.exports = calculateTotalPoints;

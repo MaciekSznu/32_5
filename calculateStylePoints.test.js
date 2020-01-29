@@ -17,5 +17,26 @@ describe('calculateStylePoints', () => {
 
       assert.equal(actual, expected);
     });
+    it('should return undefined', () => {
+      const actual = calculateStylePoints([-1, 18.5, 19, 20, 20.5]);
+
+      const expected = undefined;
+
+      assert.equal(actual, expected);
+    });
+    it('should return NaN', () => {
+      const actual = calculateStylePoints(['18.5', 18.5, 19, 20, 20]);
+
+      const expected = true;
+
+      assert.equal(isNaN(actual), expected);
+    });
+    it('should return undefined', () => {
+      const actual = calculateStylePoints([18.5, 18.5, 19, 20]);
+
+      const expected = undefined;
+
+      assert.equal(actual, expected);
+    });
   });
 });
